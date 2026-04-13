@@ -2,8 +2,17 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Datitos Packs Schema",
   "type": "object",
-  "required": ["updated_at", "currency", "packs"],
+  "required": [
+    "schema_version",
+    "updated_at",
+    "currency",
+    "packs"
+  ],
   "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
     "updated_at": {
       "type": "string",
       "format": "date-time"
@@ -17,13 +26,31 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["mb", "days", "price"],
+        "required": [
+          "mb",
+          "days",
+          "price"
+        ],
         "properties": {
-          "mb": { "type": "number", "minimum": 0 },
-          "days": { "type": "number", "minimum": 1 },
-          "price": { "type": "number", "minimum": 0 },
-          "comment": { "type": "string" },
-          "url": { "type": "string", "format": "uri" }
+          "mb": {
+            "type": "number",
+            "minimum": 0
+          },
+          "days": {
+            "type": "number",
+            "minimum": 1
+          },
+          "price": {
+            "type": "number",
+            "minimum": 0
+          },
+          "comment": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
         }
       }
     }
