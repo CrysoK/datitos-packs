@@ -40,7 +40,7 @@ Si prefieres hacerlo manualmente o quieres agregar un país/compañía que aún 
 
 Cada pack en el array `packs` debe tener:
 - `mb`: Cantidad de megas.
-- `days`: Duración en días.
+- `days`: Duración en días. **Usa `0` para packs que duran "hasta la renovación del plan"** (común en planes de abono).
 - `price`: Precio total (con impuestos si aplica).
 - `comment` (opcional): Información adicional (ej. "Solo de noche", "Incluye WhatsApp").
 
