@@ -1,6 +1,6 @@
 # Repositorio de Packs de Datitos
 
-Este repositorio contiene las listas de packs de datos móviles para la aplicación [Datitos](https://github.com/Ezequiel/datitos). Está diseñado para ser mantenido por la comunidad.
+Este repositorio contiene las listas de packs de datos móviles para la aplicación [Datitos](https://github.com/CrysoK/datitos). Está diseñado para ser mantenido por la comunidad.
 
 ## Estructura
 
