@@ -6,7 +6,7 @@ Este repositorio contiene las listas de packs de datos móviles para la aplicaci
 
 La información está organizada por país y compañía:
 
-```
+```txt
 /datitos-packs
   - manifest.json       # Índice dinámico de todos los packs
   - schema.json         # Esquema de validación actual
@@ -17,31 +17,48 @@ La información está organizada por país y compañía:
       - abono.json
 ```
 
-### Ejemplo:
+### Ejemplo
+
 `ar/personal/prepago.json`
 
 ## Cómo contribuir
 
 ### 🚀 Método recomendado (el más fácil)
+
 La aplicación [Datitos](https://datitos.vercel.app/) permite actualizar los packs de forma visual e interactiva:
-1.  Ingresa a [datitos.vercel.app](https://datitos.vercel.app/).
-2.  Selecciona el **país** y la **compañía** que deseas actualizar.
-3.  Haz clic en el botón **"Actualizar datos comunitarios"** (icono de rayo).
-4.  Modifica los precios o agrega nuevos packs en el formulario interactivo.
-5.  Al terminar, haz clic en **"Copiar y enviar PR"**. Se copiará el JSON automáticamente y se abrirá GitHub para que pegues el contenido y confirmes la propuesta.
+
+1. Ingresa a [datitos.vercel.app](https://datitos.vercel.app/).
+2. Selecciona el **país** y la **compañía** que deseas actualizar.
+3. Haz clic en el botón **"Actualizar datos comunitarios"** (icono de rayo).
+4. Modifica los precios o agrega nuevos packs en el formulario interactivo.
+5. Al terminar, haz clic en **"Copiar y enviar PR"**. Se abrirá GitHub con el título pre-configurado. Solo tendrás que pegar el contenido (si no se pegó solo) y confirmar.
     - *Nota: Necesitas una cuenta de GitHub para realizar este paso.*
 
+### Estandarización de nombres
+
+Para mantener el repositorio organizado, usa este formato para el título de tu propuesta (PR) y el commit:
+
+`[ISO] Empresa: Qué hiciste`
+
+**Ejemplos:**
+
+- `[AR] Personal: Actualizar precios`
+- `[AR] Tuenti: Agregado pack de 50GB`
+- `[CL] Entel: Corregir error en duración`
+
 ### 🛠️ Método manual
+
 Si prefieres hacerlo manualmente o quieres agregar un país/compañía que aún no existe:
-1.  Busca el país y la compañía que quieres actualizar.
-2.  Si no existe, crea la carpeta siguiendo el estándar ISO 3166-1 alpha-2 para el país (ej. `cl` para Chile).
-3.  Modifica o crea el archivo JSON correspondiente asegurándote de que siga el formato de `schema.json`.
-4.  Realiza el Pull Request con tus cambios.
 
+1. Busca el país y la compañía que quieres actualizar.
+2. Si no existe, crea la carpeta siguiendo el estándar ISO 3166-1 alpha-2 para el país (ej. `cl` para Chile).
+3. Modifica o crea el archivo JSON correspondiente asegurándote de que siga el formato de `schema.json`.
+4. Realiza el Pull Request con tus cambios.
 
-## Formato de los Packs
+## Formato de los packs
 
 Cada archivo JSON debe incluir:
+
 - `schema_version`: Versión del esquema (ej: `1`).
 - `updated_at`: Fecha de última actualización.
 - `currency`: Moneda (ej: `ARS`).
