@@ -1,0 +1,15 @@
+{
+  "updated_at": "2025-01-30T00:00:00Z",
+  "currency": "ARS",
+  "packs": [
+    { "mb": 10000, "days": 1, "price": 515, "comment": "Pack de internet 22:00-06:00" },
+    { "mb": 10000, "days": 30, "price": 5000, "comment": "Pack de internet" },
+    { "mb": 15000, "days": 30, "price": 5650, "comment": "Pack de internet" },
+    { "mb": 2000, "days": 7, "price": 2390, "comment": "Pack de internet" },
+    { "mb": 2000, "days": 15, "price": 3010, "comment": "Pack de internet" },
+    { "mb": 3000, "days": 10, "price": 4330, "comment": "Pack de internet" },
+    { "mb": 1000, "days": 3, "price": 1195, "comment": "Pack de internet" },
+    { "mb": 1000, "days": 7, "price": 1710, "comment": "Pack de internet" },
+    { "mb": 7000, "days": 30, "price": 7850, "comment": "Pack de internet" }
+  ]
+}

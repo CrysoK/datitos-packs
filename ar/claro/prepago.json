@@ -1,0 +1,22 @@
+{
+  "updated_at": "2025-01-30T00:00:00Z",
+  "currency": "ARS",
+  "packs": [
+    { "mb": 10000, "days": 1, "price": 540, "comment": "Pack de internet 22:00-06:00" },
+    { "mb": 15000, "days": 30, "price": 8000, "comment": "Pack de internet" },
+    { "mb": 2000, "days": 3, "price": 2100, "comment": "Pack de internet" },
+    { "mb": 2000, "days": 7, "price": 2750, "comment": "Pack de internet" },
+    { "mb": 10000, "days": 30, "price": 6700, "comment": "Pack de internet" },
+    { "mb": 1000, "days": 3, "price": 1250, "comment": "Pack de internet" },
+    { "mb": 1000, "days": 7, "price": 1700, "comment": "Pack de internet" },
+    { "mb": 4000, "days": 7, "price": 4200, "comment": "Pack de internet" },
+    { "mb": 2000, "days": 30, "price": 3650, "comment": "Pack de internet" },
+    { "mb": 6000, "days": 30, "price": 5730, "comment": "Pack de internet" },
+    { "mb": 25000, "days": 30, "price": 17000, "comment": "Pack de internet" },
+    { "mb": 40000, "days": 60, "price": 22000, "comment": "Pack de internet" },
+    { "mb": 3000, "days": 7, "price": 3450, "comment": "Pack de internet" },
+    { "mb": 3000, "days": 20, "price": 4100, "comment": "Pack de internet" },
+    { "mb": 1000, "days": 30, "price": 2450, "comment": "Pack de internet" },
+    { "mb": 500, "days": 2, "price": 830, "comment": "Pack de internet" }
+  ]
+}

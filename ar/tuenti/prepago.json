@@ -1,0 +1,14 @@
+{
+  "updated_at": "2025-01-30T00:00:00Z",
+  "currency": "ARS",
+  "packs": [
+    { "mb": 12000, "days": 30, "price": 11500, "comment": "Combo Max" },
+    { "mb": 6000, "days": 30, "price": 9000, "comment": "Combo Hit" },
+    { "mb": 2000, "days": 15, "price": 4100, "comment": "Combo Tuki" },
+    { "mb": 2000, "days": 7, "price": 3300, "comment": "Combo Semana" },
+    { "mb": 3000, "days": 7, "price": 3000, "comment": "Extra" },
+    { "mb": 3000, "days": 3, "price": 2200, "comment": "Extra" },
+    { "mb": 2000, "days": 1, "price": 1400, "comment": "Extra" },
+    { "mb": 200, "days": 1, "price": 530, "comment": "Diario" }
+  ]
+}
