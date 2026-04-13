@@ -1,0 +1,23 @@
+name: 🚀 Contribución de Packs
+description: Sugiere cambios o actualizaciones en los packs de una compañía.
+title: "[CONTRIB] PAIS - EMPRESA (TIPO)"
+labels: ["contribucion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### ¡Gracias por colaborar!
+        Si vienes desde la App de Datitos, este formulario ya debería estar completo.
+  - type: textarea
+    id: contribution-data
+    attributes:
+      label: Datos de la contribución
+      description: No modifiques el bloque de abajo si vienes desde la App.
+      placeholder: |
+        <!-- CONTRIBUTION_DATA_START -->
+        ```json
+        { ... }
+        ```
+        <!-- CONTRIBUTION_DATA_END -->
+    validations:
+      required: true
