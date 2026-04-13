@@ -17,11 +17,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install validator
-        run: npm install ajv-cli ajv-formats
+      - name: Install dependencies
+        run: npm install
 
       - name: Validate JSON packs
-        run: |
-          # Valida todos los archivos .json en subdirectorios (códigos de país),
-          # excluyendo schema.json de la raíz.
-          npx ajv validate -s schema.json -c ajv-formats -d "[a-z][a-z]/**/*.json"
+        run: npm run validate

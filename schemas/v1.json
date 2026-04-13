@@ -2,12 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Datitos Packs Schema",
   "type": "object",
-  "required": ["schema_version", "updated_at", "currency", "packs"],
+  "required": ["updated_at", "currency", "packs"],
   "properties": {
-    "schema_version": {
-      "type": "integer",
-      "minimum": 1
-    },
     "updated_at": {
       "type": "string",
       "format": "date-time"

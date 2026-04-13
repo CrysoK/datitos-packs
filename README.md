@@ -8,7 +8,10 @@ La información está organizada por país y compañía:
 
 ```
 /datitos-packs
-  /{código-país-iso}
+  - manifest.json       # Índice dinámico de todos los packs
+  - schema.json         # Esquema de validación actual
+  - /schemas            # Histórico de esquemas (v1.json, etc.)
+  - /{código-país-iso}
     /{compañía}
       - prepago.json
       - abono.json
@@ -38,11 +41,15 @@ Si prefieres hacerlo manualmente o quieres agregar un país/compañía que aún 
 
 ## Formato de los Packs
 
-Cada pack en el array `packs` debe tener:
-- `mb`: Cantidad de megas.
-- `days`: Duración en días. **Usa `0` para packs que duran "hasta la renovación del plan"** (común en planes de abono).
-- `price`: Precio total (con impuestos si aplica).
-- `comment` (opcional): Información adicional (ej. "Solo de noche", "Incluye WhatsApp").
+Cada archivo JSON debe incluir:
+- `schema_version`: Versión del esquema (ej: `1`).
+- `updated_at`: Fecha de última actualización.
+- `currency`: Moneda (ej: `ARS`).
+- `packs`: Array de objetos con:
+  - `mb`: Cantidad de megas.
+  - `days`: Duración en días. **Usa `0` para packs que duran "hasta la renovación del plan"**.
+  - `price`: Precio total.
+  - `comment` (opcional): Información adicional.
 
 ---
 ¡Gracias por ayudar a mantener Datitos actualizado!
