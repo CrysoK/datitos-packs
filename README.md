@@ -31,12 +31,15 @@ La aplicación [Datitos](https://datitos.vercel.app/) permite actualizar los pac
 2. Selecciona el **país** y la **compañía** que deseas actualizar.
 3. Haz clic en el botón **"Actualizar datos comunitarios"** (icono de rayo).
 4. Modifica los precios o agrega nuevos packs en el formulario interactivo.
-5. Al terminar, haz clic en **"Copiar y enviar PR"**. Se abrirá GitHub con el título pre-configurado. Solo tendrás que pegar el contenido (si no se pegó solo) y confirmar.
+5. Al terminar, haz clic en **"Enviar a GitHub"**. Se abrirá un formulario en GitHub con los datos ya cargados.
+6. Haz clic en **"Submit new issue"** y listo. Un bot procesará tu actualización y creará un Pull Request automáticamente.
     - *Nota: Necesitas una cuenta de GitHub para realizar este paso.*
 
 ### Estandarización de nombres
 
-Para mantener el repositorio organizado, usa este formato para el título de tu propuesta (PR) y el commit:
+Si usas el **Método recomendado**, el bot se encarga de esto automáticamente. 
+
+Si contribuyes manualmente, usa este formato para el título de tu propuesta (PR) y el commit:
 
 `[ISO] Empresa: Qué hiciste`
 

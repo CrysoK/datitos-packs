@@ -1,0 +1,60 @@
+name: Datitos Bot - Process Contribution
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  process:
+    if: contains(github.event.issue.title, '[CONTRIB]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Process Issue Data
+        id: processor
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: node scripts/process-issue.js
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update packs: ${{ steps.processor.outputs.company }} (${{ steps.processor.outputs.country }})"
+          branch: contrib-issue-${{ github.event.issue.number }}
+          delete-branch: true
+          title: "[${{ steps.processor.outputs.country }}] ${{ steps.processor.outputs.company }}: Actualización de packs"
+          body: |
+            Esta es una actualización automática generada por **Datitos Bot**.
+            
+            - **País**: ${{ steps.processor.outputs.country }}
+            - **Empresa**: ${{ steps.processor.outputs.company }}
+            - **Archivo**: `${{ steps.processor.outputs.target_path }}`
+            
+            Vinculado a #${{ github.event.issue.number }}
+          labels: |
+            contribucion
+            bot
+
+      - name: Comment on Issue
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '¡Gracias por tu contribución! He creado un Pull Request automáticamente para revisar los cambios. Lo verás enlazado aquí abajo. 🤖'
+            })
