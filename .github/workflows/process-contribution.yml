@@ -49,7 +49,7 @@ jobs:
             - **Empresa**: ${{ steps.processor.outputs.company }}
             - **Archivo**: `${{ steps.processor.outputs.target_path }}`
             
-            Vinculado a #${{ github.event.issue.number }}
+            Closes #${{ github.event.issue.number }}
           labels: |
             contribucion
             bot
