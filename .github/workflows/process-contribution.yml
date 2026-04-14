@@ -38,15 +38,16 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "[${{ steps.processor.outputs.country }}] ${{ steps.processor.outputs.company }}: Actualizar packs"
+          commit-message: "[${{ steps.processor.outputs.country }}] ${{ steps.processor.outputs.company }} (${{ steps.processor.outputs.list_name }}): Actualizar packs"
           branch: contrib-issue-${{ github.event.issue.number }}
           delete-branch: true
-          title: "[${{ steps.processor.outputs.country }}] ${{ steps.processor.outputs.company }}: Actualizar packs"
+          title: "[${{ steps.processor.outputs.country }}] ${{ steps.processor.outputs.company }} (${{ steps.processor.outputs.list_name }}): Actualizar packs"
           body: |
             Esta es una actualización automática generada por **DatitosBot**.
             
             - **País**: ${{ steps.processor.outputs.country }}
             - **Empresa**: ${{ steps.processor.outputs.company }}
+            - **Lista**: ${{ steps.processor.outputs.list_name }}
             - **Archivo**: `${{ steps.processor.outputs.target_path }}`
             
             Closes #${{ github.event.issue.number }}

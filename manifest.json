@@ -9,21 +9,21 @@
         {
           "name": "Claro",
           "files": [
-            { "type": "prepaid", "path": "ar/claro/prepago.json", "schema_version": 1 },
-            { "type": "postpaid", "path": "ar/claro/abono.json", "schema_version": 1 }
+            { "path": "ar/claro/prepago.json", "schema_version": 1 },
+            { "path": "ar/claro/abono.json", "schema_version": 1 }
           ]
         },
         {
           "name": "Personal",
           "files": [
-            { "type": "prepaid", "path": "ar/personal/prepago.json", "schema_version": 1 },
-            { "type": "postpaid", "path": "ar/personal/abono.json", "schema_version": 1 }
+            { "path": "ar/personal/prepago.json", "schema_version": 1 },
+            { "path": "ar/personal/abono.json", "schema_version": 1 }
           ]
         },
         {
           "name": "Tuenti",
           "files": [
-            { "type": "prepaid", "path": "ar/tuenti/prepago.json", "schema_version": 1 }
+            { "path": "ar/tuenti/prepago.json", "schema_version": 1 }
           ]
         }
       ]

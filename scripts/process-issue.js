@@ -32,26 +32,10 @@ async function run() {
     const parts = targetPath.split('/');
     country = parts[0].toUpperCase();
     company = parts[1]; // Mantener slug original del path
-    companyLabel = company.charAt(0).toUpperCase() + company.slice(1); // Fallback for label
+    companyLabel = company.charAt(0).toUpperCase() + company.slice(1);
   } else {
-    // Fallback: Determinar desde el título: [CONTRIB] AR - Company (type)
-    const titleMatch = issueTitle.match(/\[CONTRIB\] ([A-Z]{2}) - (.+) \((.+)\)/);
-    if (!titleMatch) {
-      console.error('No se pudo determinar el path ni el título tiene el formato esperado');
-      process.exit(1);
-    }
-
-    country = titleMatch[1].toLowerCase();
-    company = titleMatch[2].toLowerCase().replace(/\s+/g, '-');
-    companyLabel = titleMatch[2];
-    const typeInternal = titleMatch[3]; // prepaid | postpaid
-
-    const fileName = typeInternal === 'postpaid' ? 'abono.json' : 'prepago.json';
-    const targetDir = path.join(country, company);
-    targetPath = path.join(targetDir, fileName);
-    
-    // Convertir country a mayúsculas para el output final si vino del título
-    country = country.toUpperCase();
+    console.error('❌ Error: No se encontró el path explícito ("Archivo a modificar") en el cuerpo del issue.');
+    process.exit(1);
   }
 
   const targetDir = path.dirname(targetPath);
@@ -68,10 +52,15 @@ async function run() {
 
   console.log(`Archivo escrito exitosamente en ${targetPath}`);
   
-  // Guardar path para el próximo paso del workflow
+  // 5. Guardar outputs para el próximo paso del workflow
+  const fileName = path.basename(targetPath);
+  const listName = fileName.replace('.json', '');
+  const listLabel = listName.charAt(0).toUpperCase() + listName.slice(1);
+
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `target_path=${targetPath}\n`);
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `country=${country.toUpperCase()}\n`);
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `company=${companyLabel}\n`);
+  fs.appendFileSync(process.env.GITHUB_OUTPUT, `list_name=${listLabel}\n`);
 }
 
 run().catch(err => {
