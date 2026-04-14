@@ -1,4 +1,4 @@
-name: Datitos Bot - Process Contribution
+name: DatitosBot - Process Contribution
 
 on:
   issues:
@@ -43,7 +43,7 @@ jobs:
           delete-branch: true
           title: "[${{ steps.processor.outputs.country }}] ${{ steps.processor.outputs.company }}: Actualizar packs"
           body: |
-            Esta es una actualización automática generada por **Datitos Bot**.
+            Esta es una actualización automática generada por **DatitosBot**.
             
             - **País**: ${{ steps.processor.outputs.country }}
             - **Empresa**: ${{ steps.processor.outputs.company }}
