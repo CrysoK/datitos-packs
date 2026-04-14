@@ -1,16 +1,55 @@
 {
   "schema_version": 1,
-  "updated_at": "2025-01-30T00:00:00Z",
+  "updated_at": "2026-04-13T22:30:24.171Z",
   "currency": "ARS",
   "packs": [
-    { "mb": 50, "days": 1, "price": 405, "comment": "Pack de internet" },
-    { "mb": 1000, "days": 1, "price": 700, "comment": "Pack de internet" },
-    { "mb": 3000, "days": 7, "price": 1600, "comment": "Pack de internet" },
-    { "mb": 3000, "days": 30, "price": 2000, "comment": "Pack de internet" },
-    { "mb": 10000, "days": 30, "price": 4000, "comment": "Pack de internet" },
-    { "mb": 3000, "days": 1, "price": 1000, "comment": "Wifi Pass" },
-    { "mb": 10000, "days": 3, "price": 1500, "comment": "Wifi Pass" },
-    { "mb": 10000, "days": 15, "price": 2500, "comment": "Wifi Pass" },
-    { "mb": 30000, "days": 30, "price": 4000, "comment": "Wifi Pass" }
+    {
+      "mb": 4096,
+      "days": 7,
+      "price": 4000,
+      "comment": "Pack de internet"
+    },
+    {
+      "mb": 3072,
+      "days": 3,
+      "price": 2500,
+      "comment": "Pack de internet"
+    },
+    {
+      "mb": 2048,
+      "days": 1,
+      "price": 1500,
+      "comment": "Pack de internet"
+    },
+    {
+      "mb": 11264,
+      "days": 30,
+      "price": 11000,
+      "comment": "Pack de internet"
+    },
+    {
+      "mb": 10240,
+      "days": 15,
+      "price": 6000,
+      "comment": "WiFi Pass"
+    },
+    {
+      "mb": 10240,
+      "days": 3,
+      "price": 4500,
+      "comment": "WiFi Pass"
+    },
+    {
+      "mb": 3072,
+      "days": 1,
+      "price": 3000,
+      "comment": "WiFi Pass"
+    },
+    {
+      "mb": 30720,
+      "days": 30,
+      "price": 15000,
+      "comment": "WiFi Pass"
+    }
   ]
 }
