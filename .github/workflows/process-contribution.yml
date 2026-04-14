@@ -34,6 +34,9 @@ jobs:
       - name: Validate JSON packs
         run: npm run validate
 
+      - name: Update manifest
+        run: npm run build-manifest
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:

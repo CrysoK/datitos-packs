@@ -4,7 +4,8 @@
   "description": "Data packs for the Datitos application",
   "private": true,
   "scripts": {
-    "validate": "node scripts/validate.js"
+    "validate": "node scripts/validate.js",
+    "build-manifest": "node scripts/generate-manifest.js"
   },
   "devDependencies": {
     "ajv": "^8.12.0",

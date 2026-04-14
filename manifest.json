@@ -1,32 +1,13 @@
 {
-  "last_updated": "2026-04-12T23:36:00Z",
-  "schema_version": 1,
-  "countries": [
-    {
-      "code": "AR",
-      "name": "Argentina",
-      "companies": [
-        {
-          "name": "Claro",
-          "files": [
-            { "path": "ar/claro/prepago.json", "schema_version": 1 },
-            { "path": "ar/claro/abono.json", "schema_version": 1 }
-          ]
-        },
-        {
-          "name": "Personal",
-          "files": [
-            { "path": "ar/personal/prepago.json", "schema_version": 1 },
-            { "path": "ar/personal/abono.json", "schema_version": 1 }
-          ]
-        },
-        {
-          "name": "Tuenti",
-          "files": [
-            { "path": "ar/tuenti/prepago.json", "schema_version": 1 }
-          ]
-        }
-      ]
-    }
+  "last_updated": "2026-04-14T04:00:24.406Z",
+  "country_names": {
+    "AR": "Argentina"
+  },
+  "files": [
+    "ar/claro/abono.json",
+    "ar/claro/prepago.json",
+    "ar/personal/abono.json",
+    "ar/personal/prepago.json",
+    "ar/tuenti/prepago.json"
   ]
 }

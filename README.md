@@ -8,7 +8,7 @@ La información está organizada por país y compañía:
 
 ```txt
 /datitos-packs
-  - manifest.json       # Índice dinámico de todos los packs
+  - manifest.json       # Índice de todos los packs (autogenerado)
   - schema.json         # Esquema de validación actual
   - /schemas            # Histórico de esquemas (v1.json, etc.)
   - /{código-país-iso}
@@ -49,14 +49,17 @@ Si contribuyes manualmente, usa este formato para el título de tu propuesta (PR
 - `[AR] Tuenti: Agregado pack de 50GB`
 - `[CL] Entel: Corregir error en duración`
 
-### 🛠️ Método manual
-
 Si prefieres hacerlo manualmente o quieres agregar un país/compañía que aún no existe:
 
-1. Busca el país y la compañía que quieres actualizar.
-2. Si no existe, crea la carpeta siguiendo el estándar ISO 3166-1 alpha-2 para el país (ej. `cl` para Chile).
-3. Modifica o crea el archivo JSON correspondiente asegurándote de que siga el formato de `schema.json`.
+1. Crea la estructura de carpetas siguiendo el estándar ISO 3166-1 alpha-2 para el país (ej. `cl` para Chile).
+2. Crea el archivo JSON correspondiente (ej: `prepago.json`) siguiendo el formato de `schema.json`.
+3. **Actualiza el manifiesto**:
+   - Si es un país nuevo, agrégalo al objeto `COUNTRY_NAMES` en `scripts/generate-manifest.js`.
+   - Ejecuta `npm run build-manifest`.
 4. Realiza el Pull Request con tus cambios.
+
+> [!NOTE]
+> No es estrictamente necesario ejecutar el paso 3 para enviar un PR, ya que un bot lo hará automáticamente al procesar tu contribución, pero ayuda a validar tus cambios localmente.
 
 ## Formato de los packs
 
