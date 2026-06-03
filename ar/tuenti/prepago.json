@@ -1,15 +1,55 @@
 {
   "schema_version": 1,
-  "updated_at": "2025-01-30T00:00:00Z",
+  "updated_at": "2026-06-03T03:23:25.263Z",
   "currency": "ARS",
   "packs": [
-    { "mb": 12000, "days": 30, "price": 11500, "comment": "Combo Max" },
-    { "mb": 6000, "days": 30, "price": 9000, "comment": "Combo Hit" },
-    { "mb": 2000, "days": 15, "price": 4100, "comment": "Combo Tuki" },
-    { "mb": 2000, "days": 7, "price": 3300, "comment": "Combo Semana" },
-    { "mb": 3000, "days": 7, "price": 3000, "comment": "Extra" },
-    { "mb": 3000, "days": 3, "price": 2200, "comment": "Extra" },
-    { "mb": 2000, "days": 1, "price": 1400, "comment": "Extra" },
-    { "mb": 200, "days": 1, "price": 530, "comment": "Diario" }
+    {
+      "mb": 12000,
+      "days": 30,
+      "price": 17400,
+      "comment": "Combo Max"
+    },
+    {
+      "mb": 6000,
+      "days": 30,
+      "price": 13500,
+      "comment": "Combo Hit"
+    },
+    {
+      "mb": 2000,
+      "days": 15,
+      "price": 6300,
+      "comment": "Combo Tuki"
+    },
+    {
+      "mb": 2000,
+      "days": 7,
+      "price": 5100,
+      "comment": "Combo Semana"
+    },
+    {
+      "mb": 4000,
+      "days": 7,
+      "price": 4350,
+      "comment": "Extra"
+    },
+    {
+      "mb": 4000,
+      "days": 3,
+      "price": 3700,
+      "comment": "Extra"
+    },
+    {
+      "mb": 2000,
+      "days": 1,
+      "price": 2700,
+      "comment": "Extra"
+    },
+    {
+      "mb": 200,
+      "days": 1,
+      "price": 790,
+      "comment": "Diario"
+    }
   ]
 }
