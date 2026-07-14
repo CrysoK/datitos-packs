@@ -5,8 +5,14 @@ const { globSync } = require('glob');
 const PACKS_PATTERN = '[a-z][a-z]/**/*.json';
 const MANIFEST_PATH = path.join(__dirname, '../manifest.json');
 
-const COUNTRY_NAMES = {
-  'AR': 'Argentina'
+const countryDisplayNames = new Intl.DisplayNames(['es'], { type: 'region' });
+
+const getCountryName = (code) => {
+  try {
+    return countryDisplayNames.of(code.toUpperCase()) || code;
+  } catch {
+    return code;
+  }
 };
 
 function generateManifest() {
@@ -17,9 +23,20 @@ function generateManifest() {
     .map(f => f.replace(/\\/g, '/'))
     .sort();
 
+  const countryNames = {};
+  files.forEach(f => {
+    const parts = f.split('/');
+    if (parts.length > 0) {
+      const code = parts[0].toUpperCase();
+      if (!countryNames[code]) {
+        countryNames[code] = getCountryName(code);
+      }
+    }
+  });
+
   const manifest = {
     last_updated: new Date().toISOString(),
-    country_names: COUNTRY_NAMES,
+    country_names: countryNames,
     files: files
   };
 
