@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-14T02:22:26.948Z",
+  "currency": "ARS",
+  "packs": [
+    {
+      "mb": 1000,
+      "days": 0,
+      "price": 1000
+    },
+    {
+      "mb": 2000,
+      "days": 7,
+      "price": 2000
+    }
+  ]
+}

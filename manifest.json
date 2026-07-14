@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14T02:18:50.270Z",
+  "last_updated": "2026-07-14T02:23:16.934Z",
   "country_names": {
     "AR": "Argentina"
   },
@@ -8,6 +8,7 @@
     "ar/claro/prepago.json",
     "ar/personal/abono.json",
     "ar/personal/prepago.json",
+    "ar/personal/test.json",
     "ar/tuenti/prepago.json"
   ]
 }
