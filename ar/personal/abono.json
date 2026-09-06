@@ -1,30 +1,30 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-04-13T22:30:24.171Z",
+  "updated_at": "2026-09-06T00:08:11.970Z",
   "currency": "ARS",
   "packs": [
     {
-      "mb": 4096,
+      "mb": 5120,
       "days": 7,
-      "price": 4000,
+      "price": 6930,
       "comment": "Pack de internet"
     },
     {
       "mb": 3072,
       "days": 3,
-      "price": 2500,
+      "price": 3420,
       "comment": "Pack de internet"
     },
     {
       "mb": 2048,
       "days": 1,
-      "price": 1500,
+      "price": 1935,
       "comment": "Pack de internet"
     },
     {
-      "mb": 11264,
+      "mb": 12288,
       "days": 30,
-      "price": 11000,
+      "price": 11700,
       "comment": "Pack de internet"
     },
     {
